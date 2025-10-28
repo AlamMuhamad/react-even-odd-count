@@ -1,0 +1,33 @@
+.app-container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.display-container h2 {
+  margin: 10px 0;
+}
+
+.buttons-container {
+  margin-top: 20px;
+}
+
+.btn {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+
+.clear-btn {
+  background-color: black;
+  color: white;
+}
+.box{
+  width: 400px;
+  height: auto;
+  background: red;
+  margin: 70px 0px 0px 400px;
+}
