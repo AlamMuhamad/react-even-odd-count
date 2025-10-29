@@ -1,33 +1,157 @@
 .app-container {
   text-align: center;
   margin-top: 50px;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
 .display-container h2 {
   margin: 10px 0;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
 }
 
 .buttons-container {
-  margin-top: 20px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
 
 .btn {
-  margin: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
+  margin: 0;
+  padding: 20px 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
   cursor: pointer;
-  background: black;
-  color: white;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color:black;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+.btn.number {
+  background: linear-gradient(145deg, #2c3e50, #34495e);
+  border: 2px solid #34495e;
+}
+
+.btn.number:hover {
+  background: linear-gradient(145deg, #34495e, #2c3e50);
+}
+
+.btn.operation {
+  background: linear-gradient(145deg, #e67e22, #d35400);
+  border: 2px solid #e67e22;
+  font-size: 1.6rem;
+}
+
+.btn.operation:hover {
+  background: linear-gradient(145deg, #f39c12, #e67e22);
+}
+
+.btn.equals {
+  background: linear-gradient(145deg, #27ae60, #2ecc71);
+  border: 2px solid #27ae60;
+  font-size: 1.6rem;
+  grid-column: span 2;
+}
+
+.btn.equals:hover {
+  background: linear-gradient(145deg, #2ecc71, #27ae60);
 }
 
 .clear-btn {
-  background-color: black;
-  color: white;
+  background: linear-gradient(145deg, #c0392b, #e74c3c);
+  border: 2px solid #c0392b;
+  font-size: 1.4rem;
+  font-weight: 700;
+  grid-column: span 2;
 }
-.box{
-  width: 400px;
+
+.clear-btn:hover {
+  background: linear-gradient(145deg, #e74c3c, #c0392b);
+}
+
+.box {
+  width: 450px;
   height: auto;
-  background: red;
-  margin: 70px 0px 0px 400px;
+  background: linear-gradient(145deg, #1a1a1a, #2d3436);
+  margin: 70px auto;
+  padding: 40px 30px;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid #34495e;
+}
+
+/* Display styling */
+.display {
+  background: rgba(0, 0, 0, 0.8);
+  color: #2ecc71;
+  font-size: 2.8rem;
+  font-weight: 300;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  border: 2px solid #34495e;
+  text-align: right;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .box {
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px 20px;
+  }
+  
+  .buttons-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 0 10px;
+  }
+  
+  .btn {
+    padding: 15px 8px;
+    font-size: 1.2rem;
+    min-height: 60px;
+  }
+  
+  .display {
+    font-size: 2.2rem;
+    min-height: 60px;
+  }
+  
+  .display-container h2 {
+    font-size: 2rem;
+  }
 }
